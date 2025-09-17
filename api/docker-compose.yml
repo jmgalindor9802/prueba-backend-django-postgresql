@@ -1,0 +1,12 @@
+# docker-compose.yml (en la raíz del repo)
+services:
+  db:
+    image: postgres:16
+    container_name: pg-failfast
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: failfast
+    ports:
+      - "5432:5432"   # o "5433:5432" si 5432 está ocupado
+    volumes:
+      - C:/pgdata:/var/lib/postgresql/data
