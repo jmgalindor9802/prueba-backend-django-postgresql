@@ -9,4 +9,7 @@ services:
     ports:
       - "5432:5432"   # o "5433:5432" si 5432 está ocupado
     volumes:
-      - C:/pgdata:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
